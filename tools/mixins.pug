@@ -1,0 +1,9 @@
+-var titulo = "Subtitulo del sitio"
+-var titulos = ["Titulo principal","Subtitulo 1","Subtitulo 2","Subtitulo 3"]
+mixin box( img,title,content )
+  .caja
+    .caja__imagen: img(src="images/"+img)
+    .caja__contenido
+      h3=title
+      p=content
+      a.boton View more
