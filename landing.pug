@@ -1,5 +1,11 @@
 -var titulo = "Subtitulo del sitio"
 -var titulos = ["Titulo principal","Subtitulo 1","Subtitulo 2","Subtitulo 3"]
+mixin box( img,title,content )
+  .caja
+    .caja__imagen: img(src="images/"+img)
+    .caja__contenido
+      h3=title
+      p=content
 doctype html
 html
   head
@@ -14,10 +20,15 @@ html
       .intro__contenido
         h2 #{titulos[0]}
         p
-          | Lorem ipsum dolor sit amet, 
+          | Lorems ipsum dolor sit amet, 
           | consectetur adipisicing elit. 
           | Dicta laborum, cum asperiores 
           | reprehenderit officiis 
           | distinctio?
           span  Lorem ipsum dolor sit amet.
-        a.boton Leer màs  
+        a.boton Leer màs
+    main
+      +box('imagen.png',titulos[1],'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime corporis corrupti nesciunt, quaerat expedita tenetur.') 
+      +box('imagen.png',titulos[2],'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime corporis corrupti nesciunt, quaerat expedita tenetur.')
+      +box('imagen.png',titulos[3],'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime corporis corrupti nesciunt, quaerat expedita tenetur.') 
+       
